@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>スウェーデン航空 | Sweden Airways Official Site</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Noto+Serif+JP:wght@300;400;600&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+nordic: {
+navy: '#0B1325',
+dark: '#060B14',
+gold: '#C5A059',
+goldHover: '#D4AF37',
+lightGold: '#E6CA65',
+ice: '#F4F7F6',
+cardBg: 'rgba(15, 23, 42, 0.75)'
+}
+},
+fontFamily: {
+serif: ['Noto Serif JP', 'serif'],
+cinzel: ['Cinzel', 'serif'],
+sans: ['Plus Jakarta Sans', 'sans-serif']
+},
+aspectRatio: {
+'3/2': '3 / 2',
+'2/3': '2 / 3',
+}
+}
+}
+}
+</script>
+<style>
+body {
+font-family: 'Plus Jakarta Sans', 'Noto Serif JP', sans-serif;
+background-color: #060B14;
+color: #F4F7F6;
+overflow-x: hidden;
+}
+/* Glassmorphic Overlay */
+.glass-panel {
+background: rgba(11, 19, 37, 0.75);
+backdrop-filter: blur(16px);
+-webkit-backdrop-filter: blur(16px);
+border: 1px solid rgba(197, 160, 89, 0.25);
+}
+.glass-card {
+background: rgba(15, 23, 42, 0.85);
+backdrop-filter: blur(12px);
+border: 1px solid rgba(255, 255, 255, 0.08);
+}
+/* Hero Text Float Effect */
+.floating-text {
+text-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(197, 160, 89, 0.3);
+}
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+width: 8px;
+}
+::-webkit-scrollbar-track {
+background: #060B14;
+}
+::-webkit-scrollbar-thumb {
+background: #C5A059;
+border-radius: 4px;
+}
+/* Image Smooth Transition */
+.portrait-img {
+transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+</style>
+</head>
+<body class="antialiased selection:bg-nordic-gold selection:text-nordic-dark">
+<!-- 1. MAIN NAVIGATION HEADER -->
+<header class="fixed top-0 left-0 w-full z-50 glass-panel border-b border-nordic-gold/20">
+<nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+<!-- Brand Logo -->
+<a href="#" class="flex items-center space-x-3 group">
+<div class="w-10 h-10 rounded-full border border-nordic-gold flex items-center justify-center bg-nordic-navy group-hover:border-nordic-goldHover transition">
+<i class="fa-solid fa-crown text-nordic-gold text-lg"></i>
+</div>
+<div>
+<span class="font-cinzel text-xl md:text-2xl font-bold tracking-wider text-white block leading-none">SWEDEN AIRWAYS</span>
+<span class="text-[9px] tracking-[0.3em] text-nordic-gold uppercase font-sans">スウェーデン航空</span>
+</div>
+</a>
+<!-- Nav Links -->
+<div class="hidden lg:flex items-center space-x-8 text-xs uppercase tracking-widest font-sans">
+<a href="#status" class="text-gray-300 hover:text-nordic-gold transition flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+運航ステータス
+</a>
+<a href="#about" class="text-gray-300 hover:text-nordic-gold transition">ブランド哲学</a>
+<a href="#classes" class="text-gray-300 hover:text-nordic-gold transition">キャビンクラス</a>
+<a href="#crews" class="text-gray-300 hover:text-nordic-gold transition">乗務員紹介</a>
+<a href="#company" class="text-gray-300 hover:text-nordic-gold transition">会社概要</a>
+<a href="#booking" class="px-5 py-2.5 rounded border border-nordic-gold text-nordic-gold hover:bg-nordic-gold hover:text-nordic-dark transition font-medium">ご予約・空席照会</a>
+</div>
+<!-- Mobile Menu Button -->
+<button class="lg:hidden text-gray-300 text-2xl" id="mobileMenuBtn">
+<i class="fa-solid fa-bars"></i>
+</button>
+</nav>
+</header>
+<!-- 2. HERO SECTION -->
+<section class="relative min-h-screen flex flex-col justify-center items-center overflow-hidden pt-28 pb-16">
+<div class="absolute inset-0 z-0">
+<img src="images/hero-bg.jpg" 
+onerror="this.src='https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=1500&h=1000&q=80'" 
+alt="Tokyo to Sweden Night Flight" 
+class="w-full h-full object-cover object-center filter brightness-50 contrast-110">
+<div class="absolute inset-0 bg-gradient-to-t from-nordic-dark via-nordic-dark/50 to-nordic-navy/60"></div>
+</div>
+<div class="relative z-10 text-center max-w-4xl mx-auto px-6 floating-text my-auto">
+<div class="inline-block border-b border-nordic-gold pb-1 mb-4">
+<span class="font-cinzel text-xs md:text-sm tracking-[0.4em] text-nordic-gold uppercase">Tokyo Direct to Stockholm</span>
+</div>
+<h1 class="font-serif text-3xl md:text-6xl lg:text-7xl font-light text-white leading-tight mb-6">
+空の上に咲く、
+
+最上の北欧プライベート空間。
+</h1>
+<p class="font-sans text-sm md:text-lg text-gray-200 font-light max-w-2xl mx-auto mb-10 leading-relaxed">
+全席がファーストクラス以上の贅をつくした極上の直行便。<br class="hidden md:inline">
+極夜のオーロラが導く、静寂と美意識に満ちた12時間の空旅へ。
+</p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+<a href="#classes" class="w-full sm:w-auto px-8 py-4 bg-nordic-gold text-nordic-dark font-medium uppercase tracking-widest text-xs rounded hover:bg-nordic-goldHover transition duration-300 shadow-lg shadow-nordic-gold/20">
+キャビン詳細を見る
+</a>
+<a href="#crews" class="w-full sm:w-auto px-8 py-4 glass-panel text-white font-medium uppercase tracking-widest text-xs rounded hover:bg-white/10 transition duration-300">
+本日のフライトクルー
+</a>
+</div>
+</div>
+</section>
+<!-- 3. FLIGHT STATUS BOARD -->
+<section id="status" class="relative z-20 -mt-12 max-w-6xl mx-auto px-4 sm:px-6">
+<div class="glass-panel rounded-2xl p-6 md:p-8 shadow-2xl border border-nordic-gold/30">
+<div class="flex flex-col md:flex-row md:items-center justify-between border-b border-white/10 pb-4 mb-6 gap-2">
+<div class="flex items-center space-x-3">
+<div class="w-3 h-3 rounded-full bg-emerald-400 animate-ping"></div>
+<h3 class="font-serif text-lg md:text-xl text-white font-normal tracking-wide">
+本日の運航スケジュール & ステータス
+</h3>
+</div>
+<div class="text-xs text-nordic-gold font-mono">
+東京（羽田/成田） ➔ ストックホルム（アーランダ）直行便
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<!-- Flight 1 -->
+<div class="bg-nordic-dark/80 rounded-xl p-4 border border-white/10 hover:border-nordic-gold/40 transition">
+<div class="flex justify-between items-center mb-2">
+<span class="font-mono text-sm font-bold text-white">SK 011</span>
+<span class="text-xs px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 font-medium border border-emerald-500/30">
+<i class="fa-solid fa-circle-check text-[10px] mr-1"></i>定刻 (離陸済)
+</span>
+</div>
+<div class="text-2xl font-serif text-nordic-gold mb-3">11:00 <span class="text-xs text-gray-400 font-sans">発</span></div>
+<div class="flex justify-between items-center text-xs text-gray-400 pt-2 border-t border-white/5 font-light">
+<span><i class="fa-solid fa-location-dot text-nordic-gold mr-1"></i>羽田発 (HND)</span>
+<span>天候: 晴朗 (良好)</span>
+</div>
+</div>
+<!-- Flight 2 -->
+<div class="bg-nordic-dark/80 rounded-xl p-4 border border-white/10 hover:border-nordic-gold/40 transition">
+<div class="flex justify-between items-center mb-2">
+<span class="font-mono text-sm font-bold text-white">SK 015</span>
+<span class="text-xs px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 font-medium border border-amber-500/30 animate-pulse">
+<i class="fa-solid fa-plane-departure text-[10px] mr-1"></i>搭乗案内中
+</span>
+</div>
+<div class="text-2xl font-serif text-nordic-gold mb-3">15:00 <span class="text-xs text-gray-400 font-sans">発</span></div>
+<div class="flex justify-between items-center text-xs text-gray-400 pt-2 border-t border-white/5 font-light">
+<span><i class="fa-solid fa-location-dot text-nordic-gold mr-1"></i>成田発 (NRT)</span>
+<span>天候: 快晴</span>
+</div>
+</div>
+<!-- Flight 3 -->
+<div class="bg-nordic-dark/80 rounded-xl p-4 border border-white/10 hover:border-nordic-gold/40 transition">
+<div class="flex justify-between items-center mb-2">
+<span class="font-mono text-sm font-bold text-white">SK 018</span>
+<span class="text-xs px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 font-medium border border-blue-500/30">
+<i class="fa-solid fa-clock text-[10px] mr-1"></i>定刻予定
+</span>
+</div>
+<div class="text-2xl font-serif text-nordic-gold mb-3">18:00 <span class="text-xs text-gray-400 font-sans">発</span></div>
+<div class="flex justify-between items-center text-xs text-gray-400 pt-2 border-t border-white/5 font-light">
+<span><i class="fa-solid fa-location-dot text-nordic-gold mr-1"></i>羽田発 (HND)</span>
+<span>天候: 穏やか</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. CABIN CLASSES SECTION -->
+<section id="classes" class="py-24 relative bg-nordic-dark">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-20">
+<span class="font-cinzel text-xs text-nordic-gold tracking-[0.3em] uppercase">Unrivaled Luxury Experience</span>
+<h2 class="font-serif text-3xl md:text-5xl text-white font-light mt-2 mb-4">客室クラスのご案内</h2>
+<div class="w-16 h-0.5 bg-nordic-gold mx-auto"></div>
+<p class="text-gray-400 text-sm md:text-base max-w-2xl mx-auto mt-4 font-light">
+スウェーデン航空は全席がファーストクラス仕様。さらに極上の静寂をお約束する最高峰「ダイヤモンドクラス」を各便6席限定でご用意しております。
+</p>
+</div>
+<!-- CLASS 1: FIRST CLASS -->
+<div class="relative rounded-2xl overflow-hidden mb-20 border border-white/10 shadow-2xl">
+<div class="absolute inset-0 z-0">
+<img src="images/first-class-bg.jpg" 
+onerror="this.src='https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1500&h=1000&q=80'" 
+alt="First Class Background" 
+class="w-full h-full object-cover object-center filter brightness-40">
+<div class="absolute inset-0 bg-gradient-to-r from-nordic-dark via-nordic-dark/90 to-transparent"></div>
+</div>
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 p-8 md:p-14 items-center">
+<div class="lg:col-span-7">
+<div class="inline-flex items-center space-x-2 bg-nordic-gold/20 text-nordic-gold px-3 py-1 rounded text-xs tracking-wider mb-4 border border-nordic-gold/30">
+<i class="fa-solid fa-star"></i>
+<span>STANDARD ALL-SUITE</span>
+</div>
+<h3 class="font-serif text-2xl md:text-4xl text-white font-normal mb-4">ファーストクラス <span class="text-lg text-nordic-gold font-sans font-light">/ First Class</span></h3>
+<p class="text-gray-300 text-sm md:text-base leading-relaxed mb-6 font-light">
+北欧の上質な木目とデュベ（羽毛布団）を誂えた、洗練のセミプライベート空間。全席がダイレクト通路アクセスを保証し、フルフラットベッドに早変わりする電動リクライニングシートを採用。最高級のスウェーデン製リネンが深い眠りへと誘います。
+</p>
+<ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs md:text-sm text-gray-200 mb-8 font-light">
+<li class="flex items-center space-x-2"><i class="fa-solid fa-check text-nordic-gold"></i><span>全席フルフラットシート（180度開張）</span></li>
+<li class="flex items-center space-x-2"><i class="fa-solid fa-check text-nordic-gold"></i><span>北欧名店シェフ監修のフルコースディナー</span></li>
+<li class="flex items-center space-x-2"><i class="fa-solid fa-check text-nordic-gold"></i><span>27インチ4K大型エンターテインメントモニター</span></li>
+<li class="flex items-center space-x-2"><i class="fa-solid fa-check text-nordic-gold"></i><span>BYREDO製オーガニックアメニティキット</span></li>
+</ul>
+</div>
+<div class="lg:col-span-5">
+<div class="rounded-xl overflow-hidden border border-white/20 shadow-2xl group">
+<div class="aspect-[3/2] w-full overflow-hidden bg-nordic-navy">
+<img src="images/first-class-seat.jpg" 
+onerror="this.src='https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&h=800&q=80'" 
+alt="ファーストクラス座席" 
+class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
+</div>
+<div class="bg-nordic-navy/95 p-3 text-center text-xs text-nordic-gold font-sans tracking-widest uppercase">
+First Class Suite (3:2 Image Ratio)
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- CLASS 2: DIAMOND CLASS -->
+<div class="relative rounded-2xl overflow-hidden border border-nordic-gold/40 shadow-2xl">
+<div class="absolute inset-0 z-0">
+<img src="images/diamond-class-bg.jpg" 
+onerror="this.src='https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=1500&h=1000&q=80'" 
+alt="Diamond Class Private Suite" 
+class="w-full h-full object-cover object-center filter brightness-30">
+<div class="absolute inset-0 bg-gradient-to-r from-nordic-dark via-nordic-navy/90 to-transparent"></div>
+</div>
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 p-8 md:p-14 items-center">
+<div class="lg:col-span-7">
+<div class="inline-flex items-center space-x-2 bg-gradient-to-r from-nordic-gold to-yellow-600 text-nordic-dark font-bold px-3 py-1 rounded text-xs tracking-wider mb-4">
+<i class="fa-solid fa-gem"></i>
+<span>EXCLUSIVE 6 SEATS ONLY (A1-C2)</span>
+</div>
+<h3 class="font-serif text-3xl md:text-5xl text-white font-normal mb-4">
+ダイヤモンドクラス
+<span class="block text-sm md:text-lg text-nordic-gold font-sans font-light mt-1">/ Ultimate Diamond Suite</span>
+</h3>
+<p class="text-gray-200 text-sm md:text-base leading-relaxed mb-6 font-light">
+1機につきわずか6席（A1〜C2）限定。通路側に完全不透明の厚みのあるウォールナット＆真鍮防音スライドドアを装備し、ファーストクラスの3倍価値を誇る圧倒的な居住性と静寂を実現。贅をつくした最高峰の個室スイートです。
+</p>
+<ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs md:text-sm text-gray-200 mb-8 font-light">
+<li class="flex items-center space-x-2"><i class="fa-solid fa-gem text-nordic-gold"></i><span>完全不透明なウォールナット製防音スライドドア</span></li>
+<li class="flex items-center space-x-2"><i class="fa-solid fa-gem text-nordic-gold"></i><span>Hästens（ヘステンス）製キングサイズ仕様ベッド</span></li>
+<li class="flex items-center space-x-2"><i class="fa-solid fa-gem text-nordic-gold"></i><span>キャビア＆高級シャンパンの常時オンデマンド</span></li>
+<li class="flex items-center space-x-2"><i class="fa-solid fa-gem text-nordic-gold"></i><span>専任CAによるVIPナイトモード個別サービス</span></li>
+</ul>
+</div>
+<div class="lg:col-span-5">
+<div class="rounded-xl overflow-hidden border-2 border-nordic-gold/60 shadow-2xl group relative">
+<div class="absolute top-3 right-3 bg-nordic-gold text-nordic-dark font-bold text-[10px] px-2.5 py-1 rounded uppercase tracking-wider z-10">
+完全防音スイート
+</div>
+<div class="aspect-[3/2] w-full overflow-hidden bg-nordic-dark">
+<img src="images/diamond-class-seat.jpg" 
+onerror="this.src='https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&h=800&q=80'" 
+alt="ダイヤモンドクラス完全個室" 
+class="w-full h-full object-cover transform group-hover:scale-105 transition duration-500">
+</div>
+<div class="bg-nordic-dark p-3 text-center text-xs text-nordic-gold font-sans tracking-widest uppercase">
+Diamond Private Suite (3:2 Image Ratio)
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. FLIGHT SCHEDULE & CREW INTRODUCTION SECTION -->
+<section id="crews" class="py-24 bg-nordic-navy relative border-t border-white/5">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-16">
+<span class="font-cinzel text-xs text-nordic-gold tracking-[0.3em] uppercase">Flight Crew & Hospitality</span>
+<h2 class="font-serif text-3xl md:text-5xl text-white font-light mt-2 mb-4">時間別 運航乗務員・客室乗務員</h2>
+<div class="w-16 h-0.5 bg-nordic-gold mx-auto"></div>
+<p class="text-gray-400 text-sm md:text-base max-w-2xl mx-auto mt-4 font-light">
+日本発ストックホルム行きの1日3便。安全を守る熟練の男性機長と、洗練されたおもてなしを提供する20代の選りすぐりの日本人・韓国人女性CA（5名）が皆様をお迎えします。
+</p>
+</div>
+<!-- FLIGHT SELECT TABS -->
+<div class="flex justify-center mb-16">
+<div class="inline-flex p-1.5 rounded-xl bg-nordic-dark border border-nordic-gold/30 space-x-2">
+<button onclick="switchFlight('flight11')" id="tab-flight11" class="flight-tab active px-6 py-3 rounded-lg text-xs md:text-sm font-medium transition duration-300 flex items-center space-x-2 bg-nordic-gold text-nordic-dark">
+<i class="fa-solid fa-sun"></i>
+<span>11:00便 (SK011)</span>
+</button>
+<button onclick="switchFlight('flight15')" id="tab-flight15" class="flight-tab px-6 py-3 rounded-lg text-xs md:text-sm font-medium transition duration-300 flex items-center space-x-2 text-gray-400 hover:text-white">
+<i class="fa-solid fa-cloud-sun"></i>
+<span>15:00便 (SK015)</span>
+</button>
+<button onclick="switchFlight('flight18')" id="tab-flight18" class="flight-tab px-6 py-3 rounded-lg text-xs md:text-sm font-medium transition duration-300 flex items-center space-x-2 text-gray-400 hover:text-white">
+<i class="fa-solid fa-moon"></i>
+<span>18:00便 (SK018)</span>
+</button>
+</div>
+</div>
+<!-- CONTAINER FOR FLIGHT CREWS -->
+<div id="crew-content">
+<!-- JavaScript handles dynamic rendering -->
+</div>
+</div>
+</section>
+<!-- 6. NEW SECTION: COMPANY OVERVIEW (会社概要) -->
+<section id="company" class="py-24 bg-nordic-dark relative border-t border-white/10">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-16">
+<span class="font-cinzel text-xs text-nordic-gold tracking-[0.3em] uppercase">Corporate Information</span>
+<h2 class="font-serif text-3xl md:text-5xl text-white font-light mt-2 mb-4">会社概要</h2>
+<div class="w-16 h-0.5 bg-nordic-gold mx-auto"></div>
+<p class="text-gray-400 text-sm md:text-base max-w-2xl mx-auto mt-4 font-light">
+スウェーデン航空は、日本と北欧を結ぶ最高峰の国際プレミアム航空会社です。
+</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Left: Corporate Philosophy Card -->
+<div class="lg:col-span-5 glass-panel p-8 md:p-10 rounded-2xl border border-nordic-gold/30">
+<h3 class="font-serif text-2xl text-white mb-6 border-b border-nordic-gold/30 pb-3">企業理念・フィロソフィー</h3>
+<div class="space-y-6 text-sm text-gray-300 font-light leading-relaxed">
+<div>
+<h4 class="font-bold text-nordic-gold text-base mb-1">「北欧の静寂と、極上のおもてなし」</h4>
+<p>移動時間を単なる移動ではなく、至福のリラクゼーションと創造の時間に変えること。それが私たちの使命です。</p>
+</div>
+<div>
+<h4 class="font-bold text-nordic-gold text-base mb-1">完全全席ファーストクラスのこだわり</h4>
+<p>エコノミークラスを排し、機内全体のプライバシーと上質なサービス密度を極限まで高めた独自モデルを導入しています。</p>
+</div>
+<div>
+<h4 class="font-bold text-nordic-gold text-base mb-1">北欧クラフトマンシップ</h4>
+<p>インテリアからベッドライナー、機内食のテーブルウェアに至るまで、スウェーデン王室御用達ブランドとのパートナーシップを厳守しています。</p>
+</div>
+</div>
+</div>
+<!-- Right: Company Profile Data Table -->
+<div class="lg:col-span-7 glass-card p-8 md:p-10 rounded-2xl border border-white/10">
+<h3 class="font-serif text-2xl text-white mb-6 border-b border-white/10 pb-3">会社基本情報</h3>
+<dl class="divide-y divide-white/10 text-xs md:text-sm">
+<div class="py-3.5 sm:grid sm:grid-cols-3 sm:gap-4">
+<dt class="font-medium text-nordic-gold">商号（社名）</dt>
+<dd class="mt-1 text-gray-200 sm:mt-0 sm:col-span-2">スウェーデン航空株式会社
+<span class="text-gray-400 text-xs">Sweden Airways Corporation</span></dd>
+</div>
+<div class="py-3.5 sm:grid sm:grid-cols-3 sm:gap-4">
+<dt class="font-medium text-nordic-gold">設立年月日</dt>
+<dd class="mt-1 text-gray-200 sm:mt-0 sm:col-span-2">2020年11月1日</dd>
+</div>
+<div class="py-3.5 sm:grid sm:grid-cols-3 sm:gap-4">
+<dt class="font-medium text-nordic-gold">最高経営責任者 (CEO)</dt>
+<dd class="mt-1 text-gray-200 sm:mt-0 sm:col-span-2">ヨハン・アルフレッド・リンドストローム (Johan Alfred Lindström)</dd>
+</div>
+<div class="py-3.5 sm:grid sm:grid-cols-3 sm:gap-4">
+<dt class="font-medium text-nordic-gold">資本金</dt>
+<dd class="mt-1 text-gray-200 sm:mt-0 sm:col-span-2">85億円</dd>
+</div>
+<div class="py-3.5 sm:grid sm:grid-cols-3 sm:gap-4">
+<dt class="font-medium text-nordic-gold">事業内容</dt>
+<dd class="mt-1 text-gray-200 sm:mt-0 sm:col-span-2">定期航空運送事業（国際線定期定期便）、チャーター便事業、空港プライベートラウンジ運営事業</dd>
+</div>
+<div class="py-3.5 sm:grid sm:grid-cols-3 sm:gap-4">
+<dt class="font-medium text-nordic-gold">主要拠点・オフィス</dt>
+<dd class="mt-1 text-gray-200 sm:mt-0 sm:col-span-2">
+【本社（ストックホルム）】
+Arlanda Airport SkyCity, 190 45 Stockholm, Sweden
+
+
+【日本支社（東京）】
+東京都港区赤坂9-7-1 ミッドタウン・タワー 38階
+</dd>
+</div>
+<div class="py-3.5 sm:grid sm:grid-cols-3 sm:gap-4">
+<dt class="font-medium text-nordic-gold">主要運航路線</dt>
+<dd class="mt-1 text-gray-200 sm:mt-0 sm:col-span-2">東京（羽田/成田） ↔ ストックホルム（アーランダ）直行便（1日3往復）</dd>
+</div>
+<div class="py-3.5 sm:grid sm:grid-cols-3 sm:gap-4">
+<dt class="font-medium text-nordic-gold">保有機材</dt>
+<dd class="mt-1 text-gray-200 sm:mt-0 sm:col-span-2">Boeing 787-9 Nordic Luxury (全席全個室・全ファーストクラス仕様) 4機
+Airbus A350-900 Nordic Royal 2機</dd>
+</div>
+</dl>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. FOOTER SECTION -->
+<footer id="booking" class="bg-nordic-dark text-gray-400 pt-20 pb-12 border-t border-white/10 relative">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+<!-- Col 1 -->
+<div class="md:col-span-1">
+<div class="flex items-center space-x-3 mb-6">
+<div class="w-8 h-8 rounded-full border border-nordic-gold flex items-center justify-center bg-nordic-navy">
+<i class="fa-solid fa-crown text-nordic-gold text-sm"></i>
+</div>
+<span class="font-cinzel text-lg font-bold text-white tracking-wider">SWEDEN AIRWAYS</span>
+</div>
+<p class="text-xs text-gray-400 leading-relaxed font-light mb-6">
+東京とストックホルムを結ぶ、完全全席ファーストクラス直行便。極上の快適さと静寂を約束するプレミアム航空会社です。
+</p>
+</div>
+<!-- Col 2 -->
+<div>
+<h4 class="font-serif text-white text-sm mb-4 tracking-widest uppercase">Routes & Flights</h4>
+<ul class="space-y-2 text-xs font-light">
+<li><a href="#" class="hover:text-nordic-gold transition">SK011 (羽田 11:00 ➔ アーランダ)</a></li>
+<li><a href="#" class="hover:text-nordic-gold transition">SK015 (成田 15:00 ➔ アーランダ)</a></li>
+<li><a href="#" class="hover:text-nordic-gold transition">SK018 (羽田 18:00 ➔ アーランダ)</a></li>
+</ul>
+</div>
+<!-- Col 3 -->
+<div>
+<h4 class="font-serif text-white text-sm mb-4 tracking-widest uppercase">Company & Services</h4>
+<ul class="space-y-2 text-xs font-light">
+<li><a href="#company" class="hover:text-nordic-gold transition">会社概要・企業理念</a></li>
+<li><a href="#classes" class="hover:text-nordic-gold transition">ダイヤモンドクラス（完全防音個室）</a></li>
+<li><a href="#classes" class="hover:text-nordic-gold transition">ファーストクラス仕様</a></li>
+</ul>
+</div>
+<!-- Col 4 -->
+<div>
+<h4 class="font-serif text-white text-sm mb-4 tracking-widest uppercase">Contact & Lounge</h4>
+<p class="text-xs text-gray-400 mb-2">スウェーデン航空 コンシェルジュデスク</p>
+<p class="text-sm text-nordic-gold font-mono mb-4">+81 (0)3 5555 8888</p>
+<div class="flex space-x-4 text-gray-400 text-base">
+<a href="#" class="hover:text-nordic-gold"><i class="fa-brands fa-instagram"></i></a>
+<a href="#" class="hover:text-nordic-gold"><i class="fa-brands fa-facebook"></i></a>
+<a href="#" class="hover:text-nordic-gold"><i class="fa-brands fa-twitter"></i></a>
+</div>
+</div>
+</div>
+<!-- BOTTOM BAR & FICTIONAL DISCLAIMER (BOTTOM LEFT) -->
+<div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-xs space-y-4 md:space-y-0">
+<!-- MANDATORY REQUIRED DEMO SITE NOTICE (BOTTOM LEFT) -->
+<div class="text-gray-500 font-sans tracking-wider text-[11px]">
+※ 当ウェブサイトは架空のデモサイトです (Demo Website)
+</div>
+<div class="text-gray-500 text-[11px]">
+© 2026 Sweden Airways Corporation. All rights reserved.
+</div>
+</div>
+</div>
+</footer>
+<!-- SCRIPT DATA & INTERACTION LOGIC -->
+<script>
+const flightsData = {
+flight11: {
+time: "11:00発 (SK011)",
+origin: "東京（羽田）",
+destination: "ストックホルム（アーランダ）",
+aircraft: "Boeing 787-9 Nordic Luxury Edition",
+captain: {
+name: "ヘンリック・リンドクヴィスト (Henrik Lindqvist)",
+title: "機長 (Captain)",
+age: "48歳 / 飛行時間 14,000時間",
+photo: "images/crew/sk011-captain.jpg",
+fallbackPhoto: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&h=1200&q=80",
+comment: "日中の澄み切った空を巡る11時便を担当します。北欧の爽やかな風を感じていただけるよう、安全で快適な空旅を提供いたします。"
+},
+cas: [
+{
+name: "佐藤 葵 (Aoi Sato)",
+age: "24歳 / 日本国籍",
+role: "キャビンチーフ",
+dayImg: "images/crew/sk011-ca1-day.jpg",
+nightImg: "images/crew/sk011-ca1-night.jpg",
+fallbackDay: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&h=1200&q=80",
+fallbackNight: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&h=1200&q=80",
+comment: "昼便ならではの爽やかな北欧ティータイムをお楽しみいただけるよう、細やかな心遣いでお迎えいたします。"
+},
+{
+name: "キム・ジユン (Kim Jiyoon)",
+age: "26歳 / 韓国国籍",
+role: "ダイヤモンド専任CA",
+dayImg: "images/crew/sk011-ca2-day.jpg",
+nightImg: "images/crew/sk011-ca2-night.jpg",
+fallbackDay: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=800&h=1200&q=80",
+fallbackNight: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&h=1200&q=80",
+comment: "防音個室のダイヤモンドクラスにて、心から寛げるプライベート空間を演出いたします。"
+},
+{
+name: "高橋 凛 (Rin Takahashi)",
+age: "23歳 / 日本国籍",
+role: "ファーストクラス担当",
+dayImg: "images/crew/sk011-ca3-day.jpg",
+nightImg: "images/crew/sk011-ca3-night.jpg",
+fallbackDay: "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=800&h=1200&q=80",
+fallbackNight: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&h=1200&q=80",
+comment: "北欧モダンインテリアに囲まれた快適なシートで、上質なお食事とお飲み物をお楽しみください。"
+},
+{
+name: "パク・ソヨン (Park Soyeon)",
+age: "25歳 / 韓国国籍",
+role: "ファーストクラス担当",
+dayImg: "images/crew/sk011-ca4-day.jpg",
+nightImg: "images/crew/sk011-ca4-night.jpg",
+fallbackDay: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&h=1200&q=80",
+fallbackNight: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=800&h=1200&q=80",
+comment: "お客様一人ひとりのリクエストに素早くお応えし、最高のマリン＆スカイ体験をお約束します。"
+},
+{
+name: "渡辺 美咲 (Misaki Watanabe)",
+age: "27歳 / 日本国籍",
+role: "ソムリエ資格保持CA",
+dayImg: "images/crew/sk011-ca5-day.jpg",
+nightImg: "images/crew/sk011-ca5-night.jpg",
+fallbackDay: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=800&h=1200&q=80",
+fallbackNight: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=800&h=1200&q=80",
+comment: "厳選したヴィンテージワインとスウェーデン名物のペアリングをご提案いたします。"
+}
+]
+},
+flight15: {
+time: "15:00発 (SK015)",
+origin: "東京（成田）",
+destination: "ストックホルム（アーランダ）",
+aircraft: "Airbus A350-900 Nordic Royal",
+captain: {
+name: "ヨハン・バーグ (Johan Berg)",
+title: "機長 (Captain)",
+age: "52歳 / 飛行時間 17,500時間",
+photo: "images/crew/sk015-captain.jpg",
+fallbackPhoto: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&h=1200&q=80",
+comment: "午後の夕暮れから北欧の夜へと繋がるドラマチックなフライトをご案内いたします。揺れのない快適な旅をお届けします。"
+},
+cas: [
+{
+name: "チェ・ユジン (Choi Yujin)",
+age: "27歳 / 韓国国籍",
+role: "キャビンチーフ",
+dayImg: "images/crew/sk015-ca1-day.jpg",
+nightImg: "images/crew/sk015-ca1-night.jpg",
+fallbackDay: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&h=1200&q=80",
+fallbackNight: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&h=1200&q=80",
+comment: "サンセットを背景に味わうディナータイムを、洗練されたチームワークでプロデュースいたします。"
+},
+{
+name: "伊藤 結衣 (Yui Ito)",
+age: "24歳 / 日本国籍",
+role: "ダイヤモンド専任CA",
+dayImg: "images/crew/sk015-ca2-day.jpg",
+nightImg: "images/crew/sk015-ca2-night.jpg",
+fallbackDay: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=800&h=1200&q=80",
+fallbackNight: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&h=1200&q=80",
+comment: "完全防音スイートで静かに過ごされるお客様に、最高のプライベートリゾート感をお届けします。"
+},
+{
+name: "イ・ミナ (Lee Mina)",
+age: "23歳 / 韓国国籍",
+role: "ファーストクラス担当",
+dayImg: "images/crew/sk015-ca3-day.jpg",
+nightImg: "images/crew/sk015-ca3-night.jpg",
+fallbackDay: "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=800&h=1200&q=80",
+fallbackNight: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&h=1200&q=80",
+comment: "明るい笑顔と丁寧な接遇で、長旅の疲れを感じさせない心地よい時間をご提供します。"
+},
+{
+name: "松本 彩香 (Ayaka Matsumoto)",
+age: "26歳 / 日本国籍",
+role: "ファーストクラス担当",
+dayImg: "images/crew/sk015-ca4-day.jpg",
+nightImg: "images/crew/sk015-ca4-night.jpg",
+fallbackDay: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&h=1200&q=80",
+fallbackNight: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=800&h=1200&q=80",
+comment: "スウェーデンの伝統文化とおもてなしを融合させた特別な接遇を心掛けております。"
+},
+{
+name: "ハン・ソヒ (Han Sohee)",
+age: "25歳 / 韓国国籍",
+role: "リラクゼーション担当",
+dayImg: "images/crew/sk015-ca5-day.jpg",
+nightImg: "images/crew/sk015-ca5-night.jpg",
+fallbackDay: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=800&h=1200&q=80",
+fallbackNight: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=800&h=1200&q=80",
+comment: "ご就寝前のアロマやお休みやすくなるベッドメイクを心を込めてお手伝いします。"
+}
+]
+},
+flight18: {
+time: "18:00発 (SK018)",
+origin: "東京（羽田）",
+destination: "ストックホルム（アーランダ）",
+aircraft: "Boeing 787-9 Night Aurora Edition",
+captain: {
+name: "カルロス・エリックソン (Karl Eriksson)",
+title: "機長 (Captain)",
+age: "45歳 / 飛行時間 12,800時間",
+photo: "images/crew/sk018-captain.jpg",
+fallbackPhoto: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&h=1200&q=80",
+comment: "静寂に包まれる夜間フライトです。シベリア上空でのオーロラ遭遇も期待できる星空のフライトをお楽しみください。"
+},
+cas: [
+{
+name: "中村 玲奈 (Reina Nakamura)",
+age: "28歳 / 日本国籍",
+role: "キャビンチーフ",
+dayImg: "images/crew/sk018-ca1-day.jpg",
+nightImg: "images/crew/sk018-ca1-night.jpg",
+fallbackDay: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=800&h=1200&q=80",
+fallbackNight: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&h=1200&q=80",
+comment: "18時発のナイトフライトでは、静寂と極上のアンビエント照明で至福の眠りをご提供いたします。"
+},
+{
+name: "カン・ハウン (Kang Haeun)",
+age: "25歳 / 韓国国籍",
+role: "ダイヤモンドVIPナイトスペシャリスト",
+dayImg: "images/crew/sk018-ca2-day.jpg",
+nightImg: "images/crew/sk018-ca2-night.jpg",
+fallbackDay: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&h=1200&q=80",
+fallbackNight: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&h=1200&q=80",
+comment: "ナイトモード専用の特別ドレスにて、ダイヤモンドクラスのお客様の夜間のご要望に静かに寄り添います。"
+},
+{
+name: "小林 沙織 (Saori Kobayashi)",
+age: "24歳 / 日本国籍",
+role: "ファーストクラス担当",
+dayImg: "images/crew/sk018-ca3-day.jpg",
+nightImg: "images/crew/sk018-ca3-night.jpg",
+fallbackDay: "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=800&h=1200&q=80",
+fallbackNight: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&h=1200&q=80",
+comment: "満天の星空を眺めながら楽しむミッドナイトシャンパンと軽食をいつでもお届けします。"
+},
+{
+name: "チョン・スビン (Jung Subin)",
+age: "26歳 / 韓国国籍",
+role: "ファーストクラス担当",
+dayImg: "images/crew/sk018-ca4-day.jpg",
+nightImg: "images/crew/sk018-ca4-night.jpg",
+fallbackDay: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&h=1200&q=80",
+fallbackNight: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=800&h=1200&q=80",
+comment: "完全防音空間で熟睡していただけるよう、空調や湿度まで細かく調整いたします。"
+},
+{
+name: "加藤 恵 (Megumi Kato)",
+age: "23歳 / 日本国籍",
+role: "ファーストクラス担当",
+dayImg: "images/crew/sk018-ca5-day.jpg",
+nightImg: "images/crew/sk018-ca5-night.jpg",
+fallbackDay: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=800&h=1200&q=80",
+fallbackNight: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=800&h=1200&q=80",
+comment: "朝のお目覚め時には、できたての北欧風オーガニックブレックファストでおもてなしいたします。"
+}
+]
+}
+};
+let activeFlight = 'flight11';
+function renderCrew(flightKey) {
+const data = flightsData[flightKey];
+const container = document.getElementById('crew-content');
+let html = `
+<div class="glass-panel rounded-2xl p-6 md:p-8 mb-12 border border-nordic-gold/30">
+<div class="flex flex-col sm:flex-row items-center gap-6 md:gap-8">
+<div class="w-36 sm:w-44 md:w-48 aspect-[2/3] rounded-xl overflow-hidden border-2 border-nordic-gold flex-shrink-0 shadow-xl bg-nordic-dark">
+<img src="${data.captain.photo}" 
+onerror="this.src='${data.captain.fallbackPhoto}'" 
+alt="${data.captain.name}" 
+class="w-full h-full object-cover">
+</div>
+<div class="text-center sm:text-left flex-1">
+<div class="inline-block bg-nordic-gold text-nordic-dark font-bold text-xs px-3 py-1 rounded tracking-wider uppercase mb-2">
+<i class="fa-solid fa-user-tie mr-1"></i> ￼
+￼
+￼{data.captain.name}</h3>
+<p class="text-xs text-nordic-gold font-sans mb-4">￼
+￼
+￼{data.captain.comment}"
+</blockquote>
+</div>
+</div>
+</div>
+<div class="text-center md:text-left mb-8">
+<h3 class="font-serif text-xl md:text-2xl text-white font-light flex items-center justify-center md:justify-start gap-3">
+<i class="fa-solid fa-users text-nordic-gold text-lg"></i>
+<span>キャビンアテンダントチーム (5名)</span>
+</h3>
+<p class="text-xs text-gray-400 font-light mt-1">※ポートレート画像比率はすべて 2:3 となっております。下部ボタンで通常制服とVIPナイトモードの切り替えが可能です。</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+`;
+data.cas.forEach((ca, index) => {
+html += `
+<div class="glass-card rounded-xl overflow-hidden border border-white/10 flex flex-col justify-between group hover:border-nordic-gold/50 transition duration-300">
+<div class="relative aspect-[2/3] w-full overflow-hidden bg-nordic-dark">
+<img id="ca-img-${index}" 
+src="${ca.dayImg}" 
+onerror="this.src='${ca.fallbackDay}'"
+data-fallback-day="${ca.fallbackDay}"
+data-fallback-night="${ca.fallbackNight}"
+data-day="${ca.dayImg}"
+data-night="${ca.nightImg}"
+alt="${ca.name}" 
+class="portrait-img w-full h-full object-cover object-top">
+<div class="absolute top-3 left-3 bg-nordic-dark/80 text-gray-200 text-[10px] px-2.5 py-1 rounded border border-white/10 backdrop-blur-sm">
+${ca.role}
+</div>
+<div class="absolute bottom-3 left-1/2 transform -translate-x-1/2 glass-panel rounded-full p-1 flex space-x-1 border border-nordic-gold/40 shadow-lg">
+<button onclick="toggleCaMode(${index}, 'day')" id="btn-day-${index}" class="mode-btn px-3 py-1 rounded-full text-[10px] font-medium transition bg-nordic-gold text-nordic-dark">
+通常制服
+</button>
+<button onclick="toggleCaMode(${index}, 'night')" id="btn-night-${index}" class="mode-btn px-3 py-1 rounded-full text-[10px] font-medium transition text-gray-300 hover:text-white">
+<i class="fa-solid fa-moon text-[9px] mr-1"></i>ナイトモード
+</button>
+</div>
+</div>
+<div class="p-5">
+<h4 class="font-serif text-lg text-white font-normal mb-1">￼
+￼{ca.age}</p>
+<p class="text-xs text-gray-300 font-light leading-relaxed">
+"${ca.comment}"
+</p>
+</div>
+</div>
+`;
+});
+html += ⁠</div>⁠;
+container.innerHTML = html;
+}
+function switchFlight(flightKey) {
+activeFlight = flightKey;
+document.querySelectorAll('.flight-tab').forEach(tab => {
+tab.classList.remove('bg-nordic-gold', 'text-nordic-dark');
+tab.classList.add('text-gray-400');
+});
+const activeTab = document.getElementById(⁠tab-${flightKey}⁠);
+activeTab.classList.add('bg-nordic-gold', 'text-nordic-dark');
+activeTab.classList.remove('text-gray-400');
+renderCrew(flightKey);
+}
+function toggleCaMode(caIndex, mode) {
+const imgEl = document.getElementById(⁠ca-img-${caIndex}⁠);
+const dayBtn = document.getElementById(⁠btn-day-${caIndex}⁠);
+const nightBtn = document.getElementById(⁠btn-night-${caIndex}⁠);
+const newSrc = mode === 'day' ? imgEl.getAttribute('data-day') : imgEl.getAttribute('data-night');
+const fallbackSrc = mode === 'day' ? imgEl.getAttribute('data-fallback-day') : imgEl.getAttribute('data-fallback-night');
+imgEl.style.opacity = '0.3';
+setTimeout(() => {
+imgEl.src = newSrc;
+imgEl.onerror = () => { imgEl.src = fallbackSrc; };
+imgEl.style.opacity = '1';
+}, 150);
+if (mode === 'day') {
+dayBtn.classList.add('bg-nordic-gold', 'text-nordic-dark');
+dayBtn.classList.remove('text-gray-300');
+nightBtn.classList.remove('bg-nordic-gold', 'text-nordic-dark');
+nightBtn.classList.add('text-gray-300');
+} else {
+nightBtn.classList.add('bg-nordic-gold', 'text-nordic-dark');
+nightBtn.classList.remove('text-gray-300');
+dayBtn.classList.remove('bg-nordic-gold', 'text-nordic-dark');
+dayBtn.classList.add('text-gray-300');
+}
+}
+window.addEventListener('DOMContentLoaded', () => {
+renderCrew('flight11');
+});
+</script>
+</body>
+</html>
